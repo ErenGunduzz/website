@@ -499,7 +499,7 @@
                 <div class="col-lg-8 mx-auto animate-on-scroll">
                     <h2 class="section-title">Project Overview</h2>
                     <p class="lead text-center" style="font-size: 1.2rem; line-height: 1.8;">
-                        A secure, end-to-end encrypted chat application implemented in Java using UDP protocol. 
+                        A secure, end-to-end encrypted chat application implemented with Java. 
                         The system implements a hybrid of Signal Protocol's Double Ratchet algorithm and X3DH key 
                         agreement protocol for maximum security and forward secrecy.
                     </p>
@@ -517,7 +517,7 @@
                     <div class="feature-card text-center">
                         <i class="fas fa-lock feature-icon"></i>
                         <h4>End-to-End Encryption</h4>
-                        <p>Messages are encrypted on sender's device and only decrypted on recipient's device using AES-256-GCM.</p>
+                        <p>Messages are encrypted on sender's device and only decrypted on recipient's device using AES-256-GCM. Even server cannot read your messages.</p>
                     </div>
                 </div>
                 <div class="col-md-4 animate-on-scroll">
@@ -547,21 +547,21 @@
                     <div class="col-md-4">
                         <div class="arch-component arch-client">
                             <i class="fas fa-desktop fa-3x mb-3" style="color: #667eea;"></i>
-                            <h5>Chat Client</h5>
+                            <h5>Client</h5>
                             <p>X3DH Key Agreement<br>Double Ratchet<br>Message Encryption</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="arch-component arch-server">
                             <i class="fas fa-server fa-3x mb-3" style="color: #28a745;"></i>
-                            <h5>Chat Server</h5>
+                            <h5>Server</h5>
                             <p>Message Routing<br>Key Distribution<br>Authentication</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="arch-component arch-database">
                             <i class="fas fa-database fa-3x mb-3" style="color: #ffc107;"></i>
-                            <h5>SQLite Database</h5>
+                            <h5>Database</h5>
                             <p>User Management<br>Public Key Storage<br>Offline Messages</p>
                         </div>
                     </div>
@@ -574,38 +574,39 @@
     <section class="content-section bg-light">
         <div class="container">
             <h2 class="section-title animate-on-scroll">Technical Implementation</h2>
-            
             <div class="row">
                 <div class="col-lg-6 animate-on-scroll">
                     <h4><i class="fas fa-key me-2 text-primary"></i>X3DH Key Agreement</h4>
                     <p>Initial key establishment between two parties using Signal Protocol specification:</p>
-                    <div class="code-block">
-<pre>Shared Secret = KDF(DH1 || DH2 || DH3 || DH4)
-where:
-  DH1 = DH(IK_A, SPK_B)  // Identity × Signed PreKey
-  DH2 = DH(EK_A, IK_B)   // Ephemeral × Identity
-  DH3 = DH(EK_A, SPK_B)  // Ephemeral × Signed PreKey
-  DH4 = DH(EK_A, OPK_B)  // Ephemeral × OneTime PreKey</pre>
+                    <div class="authentication-flow security-feature">
+                        <strong>Shared Secret:</strong> <br>
+                        <code>KDF(DH1 || DH2 || DH3 || DH4)</code><br>
+                        <span>where:</span><br>
+                        <code>DH1 = DH(IK_A, SPK_B)  // Identity × Signed PreKey</code><br>
+                        <code>DH2 = DH(EK_A, IK_B)   // Ephemeral × Identity</code><br>
+                        <code>DH3 = DH(EK_A, SPK_B)  // Ephemeral × Signed PreKey</code><br>
+                        <code>DH4 = DH(EK_A, OPK_B)  // Ephemeral × OneTime PreKey</code>
                     </div>
                 </div>
-                
                 <div class="col-lg-6 animate-on-scroll">
                     <h4><i class="fas fa-sync-alt me-2 text-primary"></i>Double Ratchet Algorithm</h4>
-                    <p>Provides forward secrecy and self-healing properties:</p>
-                    <div class="code-block">
-<pre>// Derive message key from chain key
-messageKey = HMAC_SHA256(chainKey, "MESSAGEKEY" + msgNum)
-
-// Encrypt with AES-GCM
-cipher = AES_GCM(messageKey)
-encrypted = cipher.encrypt(plaintext)
-
-// Update chain key for forward secrecy
-chainKey = HMAC_SHA256(chainKey, "CHAIN_KEY_UPDATE")</pre>
+                    <p>Provides forward and backward secrecy with a new key for each message:</p>
+                    <div class="authentication-flow">
+                        <div class="security-feature">
+                            <strong>Step 1:</strong> Derive message key from chain key
+                        </div>
+                        <div class="security-feature">
+                            <strong>Step 2:</strong> Encrypt current message with AES-GCM
+                        </div>
+                        <div class="security-feature">
+                            <strong>Step 3:</strong> Update chain key for forward secrecy
+                        </div>
+                        <div class="security-feature">
+                            <strong>Step 4:</strong> User Authentication - Encrypted credentials with PBKDF2 password hashing
+                        </div>
                     </div>
                 </div>
             </div>
-
             <div class="row mt-5">
                 <div class="col-12 animate-on-scroll">
                     <h4><i class="fas fa-handshake me-2 text-primary"></i>Authentication Flow</h4>
@@ -651,7 +652,6 @@ chainKey = HMAC_SHA256(chainKey, "CHAIN_KEY_UPDATE")</pre>
                         <h4 class="text-primary"><i class="fas fa-cog me-2"></i>Technology Stack</h4>
                         <ul class="list-unstyled">
                             <li><i class="fas fa-code text-primary me-2"></i><strong>Language:</strong> Java 11+</li>
-                            <li><i class="fas fa-network-wired text-primary me-2"></i><strong>Protocol:</strong> UDP (DatagramSocket)</li>
                             <li><i class="fas fa-database text-primary me-2"></i><strong>Database:</strong> SQLite</li>
                             <li><i class="fas fa-key text-primary me-2"></i><strong>Encryption:</strong> AES-256, ECC P-256</li>
                             <li><i class="fas fa-handshake text-primary me-2"></i><strong>Key Exchange:</strong> Diffie-Hellman, ECDH</li>
@@ -674,26 +674,29 @@ chainKey = HMAC_SHA256(chainKey, "CHAIN_KEY_UPDATE")</pre>
                     <h4><i class="fas fa-download me-2 text-primary"></i>Installation</h4>
                     <div class="code-block">
 <pre># Compile server
-javac -cp ".:sqlite-jdbc.jar" ChatServer.java
+javac ChatServer.java
 
 # Compile client  
-javac -cp ".:sqlite-jdbc.jar" ChatClient.java
+javac ChatClient.java
 
 # Start server
-java -cp ".:sqlite-jdbc.jar" ChatServer 12345
+java -cp ".:lib/sqlite-jdbc-3.49.1.0.jar" ChatServer 9090
+
+#or 
+./run.sh
 
 # Connect client
-java -cp ".:sqlite-jdbc.jar" ChatClient &lt;server_ip&gt; 12345</pre>
+java ChatClient &lt;server_ip&gt; 9090</pre>
                     </div>
                 </div>
                 
                 <div class="col-lg-6 animate-on-scroll">
                     <h4><i class="fas fa-play me-2 text-primary"></i>Usage Examples</h4>
                     <div class="code-block">
-<pre># Direct message
+<pre># Direct end to end message
 @username Hello, this is a private message!
 
-# Broadcast message
+# Broadcast end to end message
 broadcast Hello everyone!
 
 # Or just type for broadcast
