@@ -6,9 +6,18 @@
     <title>Projects - Eren Gündüz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Animated Background Particles -->
+    <div class="particles" id="particles"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">Akın Eren Gündüz</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -24,66 +33,239 @@
             </div>
         </div>
     </nav>
+    
     <header class="hero">
         <div class="container">
-            <h1>My Projects</h1>
+            <h1><i class="fas fa-code me-3"></i>My Projects</h1>
             <p>Please scroll down to see a showcase of my work and contributions.</p>
         </div>
     </header>
+    
     <div class="container projects-container">
         <div class="row g-4">
+            <!-- Secure Chat Application - Featured Project -->
+            <div class="col-12 animate-on-scroll">
+                <div class="card project-card border-primary">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <h5 class="card-title text-primary">
+                                    <img src="./images/whispeer/whispeer.png" alt="Whispeer Logo" style="height: 50px; width: auto; margin-right: 15px; vertical-align: middle;">
+                                    <i class="fas fa-shield-alt me-2"></i>Secure Chat Application
+                                    <span class="badge bg-success ms-2">Featured</span>
+                                </h5>
+                                <p class="card-text">
+                                    Enterprise-grade secure messaging application implementing Signal Protocol with X3DH key agreement 
+                                    and Double Ratchet algorithm for end-to-end encryption. Features forward secrecy, perfect forward secrecy, 
+                                    and robust authentication mechanisms.
+                                </p>
+                                <div class="mb-2">
+                                    <span class="badge bg-secondary me-1">Java</span>
+                                    <span class="badge bg-secondary me-1">Cryptography</span>
+                                    <span class="badge bg-secondary me-1">Signal Protocol</span>
+                                    <span class="badge bg-secondary me-1">End-to-End Encryption</span>
+                                    <span class="badge bg-secondary me-1">UDP Networking</span>
+                                    <span class="badge bg-secondary me-1">SQLite</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <a href="secure-chat.html" class="btn btn-primary me-2">
+                                <i class="fas fa-info-circle me-1"></i>View Details
+                            </a>
+                            <a href="https://github.com/ErenGunduzz/WhisPeer_Messaging_App.git" target="_blank" class="btn btn-outline-primary">
+                                <i class="fab fa-github me-1"></i>View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- CountriesApp -->
-            <div class="col-md-6">
+            <div class="col-md-6 animate-on-scroll">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title">CountriesApp</h5>
+                        <h5 class="card-title">
+                            <i class="fas fa-globe me-2"></i>CountriesApp
+                        </h5>
                         <p class="card-text">An Android application that provides information about countries around the world.</p>
-                        <a href="https://github.com/ErenGunduzz/CountriesApp" target="_blank">View on GitHub</a>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary me-1">Android</span>
+                            <span class="badge bg-secondary me-1">Java</span>
+                            <span class="badge bg-secondary">REST API</span>
+                        </div>
+                        <a href="https://github.com/ErenGunduzz/CountriesApp" target="_blank">
+                            <i class="fab fa-github me-1"></i>View on GitHub
+                        </a>
                     </div>
                 </div>
             </div>
+
             <!-- Urban Sound Classification -->
-            <div class="col-md-6">
+            <div class="col-md-6 animate-on-scroll">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title">Urban Sound Classification</h5>
+                        <h5 class="card-title">
+                            <i class="fas fa-volume-up me-2"></i>Urban Sound Classification
+                        </h5>
                         <p class="card-text">A project focused on classifying urban sounds using machine learning techniques.</p>
-                        <a href="https://github.com/ErenGunduzz/urban-sound-classification" target="_blank">View on GitHub</a>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary me-1">Python</span>
+                            <span class="badge bg-secondary me-1">Machine Learning</span>
+                            <span class="badge bg-secondary">Audio Processing</span>
+                        </div>
+                        <a href="https://github.com/ErenGunduzz/urban-sound-classification" target="_blank">
+                            <i class="fab fa-github me-1"></i>View on GitHub
+                        </a>
                     </div>
                 </div>
             </div>
+
             <!-- Lexical Analyzer in C -->
-            <div class="col-md-6">
+            <div class="col-md-6 animate-on-scroll">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title">Lexical Analyzer in C</h5>
+                        <h5 class="card-title">
+                            <i class="fas fa-code me-2"></i>Lexical Analyzer in C
+                        </h5>
                         <p class="card-text">A lexical analyzer implemented in C for processing and analyzing source code.</p>
-                        <a href="https://github.com/ErenGunduzz/lexical_analyser_c" target="_blank">View on GitHub</a>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary me-1">C</span>
+                            <span class="badge bg-secondary me-1">Compiler Design</span>
+                            <span class="badge bg-secondary">Parsing</span>
+                        </div>
+                        <a href="https://github.com/ErenGunduzz/lexical_analyser_c" target="_blank">
+                            <i class="fab fa-github me-1"></i>View on GitHub
+                        </a>
                     </div>
                 </div>
             </div>
+
             <!-- Password Cracking with Genetic Algorithms -->
-            <div class="col-md-6">
+            <div class="col-md-6 animate-on-scroll">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title">Password Cracking with Genetic Algorithms</h5>
+                        <h5 class="card-title">
+                            <i class="fas fa-dna me-2"></i>Password Cracking with Genetic Algorithms
+                        </h5>
                         <p class="card-text">A C# program that utilizes genetic algorithms to crack passwords efficiently.</p>
-                        <a href="https://github.com/ErenGunduzz/PasswordCrackingWithGeneticAlgorithms" target="_blank">View on GitHub</a>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary me-1">C#</span>
+                            <span class="badge bg-secondary me-1">Genetic Algorithms</span>
+                            <span class="badge bg-secondary">Security Research</span>
+                        </div>
+                        <a href="https://github.com/ErenGunduzz/PasswordCrackingWithGeneticAlgorithms" target="_blank">
+                            <i class="fab fa-github me-1"></i>View on GitHub
+                        </a>
                     </div>
                 </div>
             </div>
+
             <!-- Gyroscope API -->
-            <div class="col-md-6">
+            <div class="col-md-6 animate-on-scroll">
                 <div class="card project-card">
                     <div class="card-body">
-                        <h5 class="card-title">Gyroscope API</h5>
+                        <h5 class="card-title">
+                            <i class="fas fa-satellite me-2"></i>Gyroscope API
+                        </h5>
                         <p class="card-text">A C++ project that provides an API for interfacing with gyroscope sensors.</p>
-                        <a href="https://github.com/ErenGunduzz/GYROSCOPE_API" target="_blank">View on GitHub</a>
+                        <div class="mb-2">
+                            <span class="badge bg-secondary me-1">C++</span>
+                            <span class="badge bg-secondary me-1">Embedded Systems</span>
+                            <span class="badge bg-secondary">IoT</span>
+                        </div>
+                        <a href="https://github.com/ErenGunduzz/GYROSCOPE_API" target="_blank">
+                            <i class="fab fa-github me-1"></i>View on GitHub
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Loading animation
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loadingOverlay').style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Animated particles background
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Scroll animations
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            const windowHeight = window.innerHeight;
+
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+
+        // Project cards interaction
+        function initProjectCards() {
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.card-title i');
+                    if (icon) {
+                        icon.style.transform = 'scale(1.2) rotate(10deg)';
+                        icon.style.textShadow = '0 0 20px rgba(102, 126, 234, 0.8)';
+                    }
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('.card-title i');
+                    if (icon) {
+                        icon.style.transform = 'scale(1) rotate(0deg)';
+                        icon.style.textShadow = 'none';
+                    }
+                });
+            });
+        }
+
+        // Initialize all functions
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            initProjectCards();
+            animateOnScroll();
+        });
+
+        // Add scroll event listener
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
 </body>
 </html>
