@@ -382,6 +382,140 @@
             background-clip: text;
         }
 
+        /* Screenshot Gallery Styles */
+        .screenshot-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .screenshot-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(40, 167, 69, 0.3);
+            border-color: rgba(40, 167, 69, 0.5);
+        }
+
+        .screenshot-card img {
+            width: 100%;
+            height: auto;
+            transition: all 0.4s ease;
+        }
+
+        .screenshot-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .screenshot-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.9), rgba(32, 201, 151, 0.9));
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: all 0.4s ease;
+        }
+
+        .screenshot-card:hover .screenshot-overlay {
+            transform: translateY(0);
+        }
+
+        .screenshot-overlay h5 {
+            margin: 0 0 10px 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .screenshot-overlay p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Align screenshot cards vertically */
+        .screenshot-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .screenshot-card img {
+            flex: 1;
+            object-fit: cover;
+            min-height: 200px;
+        }
+
+        /* Video Demo Styles */
+        .video-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .video-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(40, 167, 69, 0.3);
+            border-color: rgba(40, 167, 69, 0.5);
+        }
+
+        .demo-video {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            display: block;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .video-container:hover .video-overlay {
+            opacity: 1;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .play-button i {
+            color: white;
+            font-size: 2rem;
+            margin-left: 5px;
+        }
+
+        .video-container:hover .play-button {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(40, 167, 69, 0.6);
+        }
+
         /* Scroll animations */
         .animate-on-scroll {
             opacity: 0;
@@ -666,6 +800,117 @@ POST   /api/adoption/adopters      # Create new adopter</pre>
         </div>
     </section>
 
+    <!-- Screenshots Gallery -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Application Screenshots</h2>
+            <p class="text-center lead mb-5">Explore the user interface and features of AnimalCare through these screenshots</p>
+            
+            <div class="row g-4 align-items-stretch">
+                <div class="col-md-6 col-lg-4 animate-on-scroll">
+                    <div class="screenshot-card">
+                        <img src="./images/animalcare/home_page.png" alt="Home Page" class="img-fluid rounded">
+                        <div class="screenshot-overlay">
+                            <h5>Home Dashboard</h5>
+                            <p>Main dashboard with statistics and quick access</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 animate-on-scroll">
+                    <div class="screenshot-card">
+                        <img src="./images/animalcare/login_page.png" alt="Login Page" class="img-fluid rounded">
+                        <div class="screenshot-overlay">
+                            <h5>Login Page</h5>
+                            <p>Secure authentication interface</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 animate-on-scroll">
+                    <div class="screenshot-card">
+                        <img src="./images/animalcare/animals_page.png" alt="Animals Page" class="img-fluid rounded">
+                        <div class="screenshot-overlay">
+                            <h5>Animals Management</h5>
+                            <p>Comprehensive animal listing and management</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 animate-on-scroll">
+                    <div class="screenshot-card">
+                        <img src="./images/animalcare/add_animal_page.png" alt="Add Animal Page" class="img-fluid rounded">
+                        <div class="screenshot-overlay">
+                            <h5>Add New Animal</h5>
+                            <p>Form for registering new animals</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 animate-on-scroll">
+                    <div class="screenshot-card">
+                        <img src="./images/animalcare/adoptions_page.png" alt="Adoptions Page" class="img-fluid rounded">
+                        <div class="screenshot-overlay">
+                            <h5>Adoption Management</h5>
+                            <p>Track and manage adoption processes</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 animate-on-scroll">
+                    <div class="screenshot-card">
+                        <img src="./images/animalcare/treatments_page.png" alt="Treatments Page" class="img-fluid rounded">
+                        <div class="screenshot-overlay">
+                            <h5>Health Tracking</h5>
+                            <p>Medical treatments and health records</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 animate-on-scroll">
+                    <div class="screenshot-card">
+                        <img src="./images/animalcare/reports_page.png" alt="Reports Page" class="img-fluid rounded">
+                        <div class="screenshot-overlay">
+                            <h5>Reports & Analytics</h5>
+                            <p>Comprehensive reporting and data analysis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Application Demo</h2>
+            <p class="text-center lead mb-5">Watch a comprehensive demo of AnimalCare in action</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10 animate-on-scroll">
+                    <div class="video-container">
+                        <video controls class="demo-video">
+                            <source src="./images/animalcare/AnimalCare.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <p class="text-muted">
+                    <i class="fas fa-info-circle me-2"></i>
+                    This demo showcases the complete user experience, from login to advanced features
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Call to Action -->
     <section class="content-section">
         <div class="container text-center">
@@ -791,12 +1036,102 @@ POST   /api/adoption/adopters      # Create new adopter</pre>
             });
         }
 
+        // Screenshot cards interaction
+        function initScreenshotCards() {
+            const screenshotCards = document.querySelectorAll('.screenshot-card');
+            screenshotCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px) scale(1.03)';
+                    this.style.boxShadow = '0 25px 50px rgba(40, 167, 69, 0.4)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
+                });
+
+                // Click to enlarge effect
+                card.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    if (img) {
+                        // Create modal effect
+                        const modal = document.createElement('div');
+                        modal.style.position = 'fixed';
+                        modal.style.top = '0';
+                        modal.style.left = '0';
+                        modal.style.width = '100%';
+                        modal.style.height = '100%';
+                        modal.style.background = 'rgba(0, 0, 0, 0.9)';
+                        modal.style.display = 'flex';
+                        modal.style.justifyContent = 'center';
+                        modal.style.alignItems = 'center';
+                        modal.style.zIndex = '9999';
+                        modal.style.cursor = 'pointer';
+                        
+                        const modalImg = document.createElement('img');
+                        modalImg.src = img.src;
+                        modalImg.style.maxWidth = '90%';
+                        modalImg.style.maxHeight = '90%';
+                        modalImg.style.borderRadius = '10px';
+                        modalImg.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.5)';
+                        
+                        modal.appendChild(modalImg);
+                        document.body.appendChild(modal);
+                        
+                        modal.addEventListener('click', function() {
+                            document.body.removeChild(modal);
+                        });
+                    }
+                });
+            });
+        }
+
+        // Video interaction
+        function initVideo() {
+            const video = document.querySelector('.demo-video');
+            const videoContainer = document.querySelector('.video-container');
+            
+            if (video && videoContainer) {
+                // Add click to play functionality
+                videoContainer.addEventListener('click', function() {
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+
+                // Add keyboard controls
+                document.addEventListener('keydown', function(e) {
+                    if (e.code === 'Space' && document.activeElement === video) {
+                        e.preventDefault();
+                        if (video.paused) {
+                            video.play();
+                        } else {
+                            video.pause();
+                        }
+                    }
+                });
+
+                // Add loading animation
+                video.addEventListener('loadstart', function() {
+                    videoContainer.style.opacity = '0.7';
+                });
+
+                video.addEventListener('canplay', function() {
+                    videoContainer.style.opacity = '1';
+                });
+            }
+        }
+
         // Initialize all functions
         document.addEventListener('DOMContentLoaded', function() {
             createParticles();
             initTechBadges();
             initArchComponents();
             initFeatureCards();
+            initScreenshotCards();
+            initVideo();
             animateOnScroll();
         });
 

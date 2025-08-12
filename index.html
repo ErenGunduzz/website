@@ -35,7 +35,7 @@
             position: absolute;
             width: 4px;
             height: 4px;
-            background: rgba(102, 126, 234, 0.6);
+            background: rgba(40, 167, 69, 0.6);
             border-radius: 50%;
             animation: float 20s infinite linear;
         }
@@ -60,7 +60,7 @@
         .navbar {
             background: rgba(0, 0, 0, 0.95) !important;
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(102, 126, 234, 0.3);
+            border-bottom: 1px solid rgba(40, 167, 69, 0.3);
             transition: all 0.3s ease;
             z-index: 1000;
         }
@@ -92,7 +92,7 @@
             height: 2px;
             bottom: 0;
             left: 50%;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(90deg, #28a745, #20c997);
             transition: all 0.3s ease;
         }
 
@@ -103,7 +103,7 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background: linear-gradient(135deg, #28a745 0%, #20c997 50%, #17a2b8 100%);
             color: white;
             padding: 150px 0 100px;
             text-align: center;
@@ -196,8 +196,8 @@
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 30px;
+            padding: 50px 40px;
+            margin-bottom: 40px;
             transition: all 0.4s ease;
             backdrop-filter: blur(10px);
             position: relative;
@@ -212,15 +212,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(32, 201, 151, 0.1) 100%);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
 
         .feature:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
-            border-color: rgba(102, 126, 234, 0.5);
+            box-shadow: 0 20px 40px rgba(40, 167, 69, 0.2);
+            border-color: rgba(40, 167, 69, 0.5);
         }
 
         .feature:hover::before {
@@ -240,21 +240,21 @@
         }
 
         .feature-github h3 i {
-            background: linear-gradient(135deg, #f89b29 0%, #ff6b6b 100%);
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .feature-linkedin h3 i {
-            background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .feature-projects h3 i {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -284,21 +284,21 @@
         }
 
         .feature-github .icon-link {
-            background: linear-gradient(135deg, #f89b29 0%, #ff6b6b 100%);
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             color: white;
-            box-shadow: 0 4px 15px rgba(248, 155, 41, 0.4);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
         }
 
         .feature-linkedin .icon-link {
-            background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             color: white;
-            box-shadow: 0 4px 15px rgba(0, 119, 181, 0.4);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
         }
 
         .feature-projects .icon-link {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             color: white;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
         }
 
         .icon-link::before {
@@ -323,15 +323,15 @@
         }
 
         .feature-github .icon-link:hover {
-            box-shadow: 0 8px 25px rgba(248, 155, 41, 0.6);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.6);
         }
 
         .feature-linkedin .icon-link:hover {
-            box-shadow: 0 8px 25px rgba(0, 119, 181, 0.6);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.6);
         }
 
         .feature-projects .icon-link:hover {
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.6);
         }
 
         .icon-link i {
@@ -360,8 +360,8 @@
         .loader {
             width: 60px;
             height: 60px;
-            border: 3px solid rgba(102, 126, 234, 0.3);
-            border-top: 3px solid #667eea;
+            border: 3px solid rgba(40, 167, 69, 0.3);
+            border-top: 3px solid #28a745;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -426,18 +426,18 @@
         }
 
         .badge-security {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
         }
 
         .badge-software {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+            background: linear-gradient(135deg, #20c997 0%, #17a2b8 100%);
+            box-shadow: 0 4px 15px rgba(32, 201, 151, 0.4);
         }
 
         .badge-creative {
-            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
-            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.4);
+            background: linear-gradient(135deg, #17a2b8 0%, #6f42c1 100%);
+            box-shadow: 0 4px 15px rgba(23, 162, 184, 0.4);
         }
 
         .section-title {
@@ -445,7 +445,7 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 4rem;
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            background: linear-gradient(135deg, #28a745, #20c997, #17a2b8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -485,22 +485,22 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #28a745, #20c997);
             border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(135deg, #764ba2, #f093fb);
+            background: linear-gradient(135deg, #20c997, #17a2b8);
         }
 
         /* Enhanced text selection */
         ::selection {
-            background: rgba(102, 126, 234, 0.3);
+            background: rgba(40, 167, 69, 0.3);
             color: white;
         }
 
         ::-moz-selection {
-            background: rgba(102, 126, 234, 0.3);
+            background: rgba(40, 167, 69, 0.3);
             color: white;
         }
 
@@ -569,7 +569,7 @@
     <div class="features-container">
         <div class="container">
             <h2 class="section-title animate-on-scroll">Connect With Me</h2>
-            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="row g-5 py-5 row-cols-1 row-cols-lg-3">
                 <div class="feature col text-center animate-on-scroll feature-github">
                     <h3 class="fs-2">
                         <i class="fab fa-github"></i>GitHub
@@ -661,7 +661,7 @@
                     const icon = this.querySelector('h3 i');
                     if (icon) {
                         icon.style.transform = 'scale(1.2) rotate(10deg)';
-                        icon.style.textShadow = '0 0 20px rgba(102, 126, 234, 0.8)';
+                        icon.style.textShadow = '0 0 20px rgba(40, 167, 69, 0.8)';
                     }
                 });
                 
@@ -771,7 +771,7 @@
                             rgba(255,255,255,0.1) 0%, 
                             transparent 70%
                         ),
-                        linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)
+                        linear-gradient(135deg, #28a745 0%, #20c997 50%, #17a2b8 100%)
                     `;
                 }
             }
