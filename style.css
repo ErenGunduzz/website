@@ -509,7 +509,7 @@ body {
     color: white;
     max-width: 800px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .contact-container::before {
@@ -553,6 +553,9 @@ body {
     color: white;
     padding: 12px 15px;
     transition: all 0.3s ease;
+    pointer-events: auto !important;
+    z-index: 10 !important;
+    position: relative;
 }
 
 .form-control:focus {

@@ -36,18 +36,22 @@
 
     <div class="contact-container animate-on-scroll">
         <h1><i class="fas fa-envelope me-3"></i>Contact Me</h1>
-        <form action="https://formsubmit.co/a.erengunduz@gmail.com" method="POST">            
+        <form name="contact" method="POST" data-netlify="true">            
             <input type="hidden" name="_captcha" value="false">
                        
-            <input type="hidden" name="_next" value="https://erengunduz.com/index.html">
-        
-            <input type="hidden" name="_subject" value="New Contact Form Submission">
+            <input type="hidden" name="form-name" value="contact">
 
             <div class="mb-3">
                 <label for="name" class="form-label">
                     <i class="fas fa-user me-2"></i>Your Name
                 </label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">
+                    <i class="fas fa-envelope me-2"></i>Your Email
+                </label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
             </div>
             <div class="mb-3">
                 <label for="message" class="form-label">
@@ -58,6 +62,12 @@
             <button type="submit" class="btn btn-primary">
                 <i class="fas fa-paper-plane me-2"></i>Send Message
             </button>
+            <div class="mt-3 text-center">
+                <p class="text-muted">Veya doğrudan email gönderin:</p>
+                <a href="mailto:a.erengunduz@gmail.com" class="btn btn-outline-primary">
+                    <i class="fas fa-envelope me-2"></i>a.erengunduz@gmail.com
+                </a>
+            </div>
         </form>
     </div>
     
@@ -117,6 +127,10 @@
         function initFormEffects() {
             const inputs = document.querySelectorAll('.form-control');
             inputs.forEach(input => {
+                // Ensure inputs are interactive
+                input.style.pointerEvents = 'auto';
+                input.style.zIndex = '10';
+                
                 input.addEventListener('focus', function() {
                     this.parentElement.style.transform = 'translateY(-5px)';
                     this.parentElement.style.transition = 'all 0.3s ease';
