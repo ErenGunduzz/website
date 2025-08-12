@@ -493,6 +493,11 @@
             opacity: 1;
         }
 
+        /* Hide overlay when video is playing */
+        .video-container.playing .video-overlay {
+            opacity: 0 !important;
+        }
+
         .play-button {
             width: 80px;
             height: 80px;
@@ -889,7 +894,7 @@ POST   /api/adoption/adopters      # Create new adopter</pre>
             <div class="row justify-content-center">
                 <div class="col-lg-10 animate-on-scroll">
                     <div class="video-container">
-                        <video controls class="demo-video">
+                        <video controls class="demo-video" tabindex="0">
                             <source src="./images/animalcare/AnimalCare.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -1092,34 +1097,63 @@ POST   /api/adoption/adopters      # Create new adopter</pre>
             const videoContainer = document.querySelector('.video-container');
             
             if (video && videoContainer) {
-                // Add click to play functionality
-                videoContainer.addEventListener('click', function() {
+                // Play/Pause functionality
+                function togglePlay() {
                     if (video.paused) {
-                        video.play();
+                        video.play().then(() => {
+                            videoContainer.classList.add('playing');
+                        }).catch(error => {
+                            console.log('Video play failed:', error);
+                        });
                     } else {
                         video.pause();
+                        videoContainer.classList.remove('playing');
                     }
+                }
+
+                // Click on video container to play/pause
+                videoContainer.addEventListener('click', function(e) {
+                    // Don't trigger if clicking on video controls
+                    if (e.target === video || e.target.closest('video')) {
+                        return;
+                    }
+                    togglePlay();
                 });
 
-                // Add keyboard controls
-                document.addEventListener('keydown', function(e) {
-                    if (e.code === 'Space' && document.activeElement === video) {
+                // Video event listeners
+                video.addEventListener('play', function() {
+                    videoContainer.classList.add('playing');
+                });
+
+                video.addEventListener('pause', function() {
+                    videoContainer.classList.remove('playing');
+                });
+
+                video.addEventListener('ended', function() {
+                    videoContainer.classList.remove('playing');
+                });
+
+                // Keyboard controls (only when video is focused)
+                video.addEventListener('keydown', function(e) {
+                    if (e.code === 'Space') {
                         e.preventDefault();
-                        if (video.paused) {
-                            video.play();
-                        } else {
-                            video.pause();
-                        }
+                        togglePlay();
                     }
                 });
 
-                // Add loading animation
+                // Loading states
                 video.addEventListener('loadstart', function() {
                     videoContainer.style.opacity = '0.7';
                 });
 
                 video.addEventListener('canplay', function() {
                     videoContainer.style.opacity = '1';
+                });
+
+                // Error handling
+                video.addEventListener('error', function() {
+                    console.log('Video error:', video.error);
+                    videoContainer.style.opacity = '0.5';
                 });
             }
         }
