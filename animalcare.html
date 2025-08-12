@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Chat Application - Eren Gündüz</title>
+    <title>AnimalCare - Eren Gündüz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
@@ -35,7 +35,7 @@
             position: absolute;
             width: 4px;
             height: 4px;
-            background: rgba(102, 126, 234, 0.6);
+            background: rgba(40, 167, 69, 0.6);
             border-radius: 50%;
             animation: float 20s infinite linear;
         }
@@ -60,7 +60,7 @@
         .navbar {
             background: rgba(0, 0, 0, 0.95) !important;
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(102, 126, 234, 0.3);
+            border-bottom: 1px solid rgba(40, 167, 69, 0.3);
             transition: all 0.3s ease;
         }
 
@@ -70,7 +70,7 @@
         }
 
         .hero-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background: linear-gradient(135deg, #28a745 0%, #20c997 50%, #17a2b8 100%);
             color: white;
             padding: 120px 0;
             text-align: center;
@@ -183,31 +183,29 @@
             box-shadow: 0 4px 15px rgba(248, 155, 41, 0.4);
         }
 
-        .badge-signal {
-            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
-            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.4);
+        .badge-spring {
+            background: linear-gradient(135deg, #6db33f 0%, #5cb85c 100%);
+            box-shadow: 0 4px 15px rgba(109, 179, 63, 0.4);
         }
 
-        .badge-encryption {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        .badge-react {
+            background: linear-gradient(135deg, #61dafb 0%, #4ecdc4 100%);
+            box-shadow: 0 4px 15px rgba(97, 218, 251, 0.4);
         }
 
-        .badge-ratchet {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+        .badge-typescript {
+            background: linear-gradient(135deg, #3178c6 0%, #007acc 100%);
+            box-shadow: 0 4px 15px rgba(49, 120, 198, 0.4);
         }
 
-        .badge-x3dh {
-            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-            color: #333;
-            box-shadow: 0 4px 15px rgba(252, 182, 159, 0.4);
+        .badge-mysql {
+            background: linear-gradient(135deg, #00758f 0%, #f29111 100%);
+            box-shadow: 0 4px 15px rgba(0, 117, 143, 0.4);
         }
 
-        .badge-udp {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            color: #333;
-            box-shadow: 0 4px 15px rgba(168, 237, 234, 0.4);
+        .badge-ddd {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
         }
 
         .content-section {
@@ -238,15 +236,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(32, 201, 151, 0.1) 100%);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
 
         .feature-card:hover {
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
-            border-color: rgba(102, 126, 234, 0.5);
+            box-shadow: 0 20px 40px rgba(40, 167, 69, 0.2);
+            border-color: rgba(40, 167, 69, 0.5);
         }
 
         .feature-card:hover::before {
@@ -256,7 +254,7 @@
         .feature-icon {
             font-size: 3.5rem;
             margin-bottom: 25px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #28a745, #20c997);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -286,16 +284,16 @@
             cursor: pointer;
         }
 
-        .arch-client {
-            border-color: #667eea;
+        .arch-frontend {
+            border-color: #61dafb;
         }
 
-        .arch-server {
-            border-color: #28a745;
+        .arch-backend {
+            border-color: #6db33f;
         }
 
         .arch-database {
-            border-color: #ffc107;
+            border-color: #f29111;
         }
 
         .arch-component:hover {
@@ -309,7 +307,7 @@
             border-radius: 15px;
             padding: 25px;
             margin: 25px 0;
-            border: 1px solid rgba(102, 126, 234, 0.3);
+            border: 1px solid rgba(40, 167, 69, 0.3);
             position: relative;
             overflow: hidden;
         }
@@ -321,25 +319,25 @@
             left: 0;
             width: 100%;
             height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            background: linear-gradient(90deg, #28a745, #20c997, #17a2b8);
         }
 
-        .security-feature {
-            border-left: 4px solid #667eea;
+        .feature-list {
+            border-left: 4px solid #28a745;
             padding: 20px;
             margin: 25px 0;
-            background: rgba(102, 126, 234, 0.1);
+            background: rgba(40, 167, 69, 0.1);
             border-radius: 0 10px 10px 0;
             transition: all 0.3s ease;
         }
 
-        .security-feature:hover {
-            background: rgba(102, 126, 234, 0.2);
+        .feature-list:hover {
+            background: rgba(40, 167, 69, 0.2);
             transform: translateX(10px);
         }
 
         .btn-custom {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #28a745, #20c997);
             border: none;
             color: white;
             padding: 15px 35px;
@@ -369,7 +367,7 @@
 
         .btn-custom:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 10px 25px rgba(40, 167, 69, 0.4);
             color: white;
         }
 
@@ -378,7 +376,7 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 4rem;
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            background: linear-gradient(135deg, #28a745, #20c997, #17a2b8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -414,8 +412,8 @@
         .loader {
             width: 60px;
             height: 60px;
-            border: 3px solid rgba(102, 126, 234, 0.3);
-            border-top: 3px solid #667eea;
+            border: 3px solid rgba(40, 167, 69, 0.3);
+            border-top: 3px solid #28a745;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -473,19 +471,18 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <img src="./images/whispeer/whispeer.png" alt="Whispeer Logo" style="height: 100px; width: auto; margin-right: 15px; vertical-align: middle;">
-                    WhisPeer Messaging App
+                    <i class="fas fa-paw me-3"></i>AnimalCare
                 </h1>
-                <p class="hero-subtitle">End-to-End encrypted messaging using Signal Protocol implementation</p>
+                <p class="hero-subtitle">Animal Shelter Management System - Built with Modern Web Technologies</p>
                 <div class="tech-badges">
-                    <span class="tech-badge badge-java">Java</span>
-                    <span class="tech-badge badge-signal">Signal Protocol</span>
-                    <span class="tech-badge badge-encryption">End-to-End Encryption</span>
-                    <span class="tech-badge badge-ratchet">Double Ratchet</span>
-                    <span class="tech-badge badge-x3dh">X3DH</span>
-                    <span class="tech-badge badge-udp">UDP Networking</span>
+                    <span class="tech-badge badge-java">Java 23</span>
+                    <span class="tech-badge badge-spring">Spring Boot</span>
+                    <span class="tech-badge badge-react">React 19</span>
+                    <span class="tech-badge badge-typescript">TypeScript</span>
+                    <span class="tech-badge badge-mysql">MySQL</span>
+                    <span class="tech-badge badge-ddd">DDD</span>
                 </div>
-                <a href="https://github.com/ErenGunduzz/WhisPeer_Messaging_App.git" target="_blank" class="btn btn-custom btn-lg">
+                <a href="https://github.com/ErenGunduzz/AnimalCare" target="_blank" class="btn btn-custom btn-lg">
                     <i class="fab fa-github me-2"></i>View on GitHub
                 </a>
             </div>
@@ -499,9 +496,9 @@
                 <div class="col-lg-8 mx-auto animate-on-scroll">
                     <h2 class="section-title">Project Overview</h2>
                     <p class="lead text-center" style="font-size: 1.2rem; line-height: 1.8;">
-                        A secure, end-to-end encrypted chat application implemented with Java. 
-                        The system implements a hybrid of Signal Protocol's Double Ratchet algorithm and X3DH key 
-                        agreement protocol for maximum security and forward secrecy.
+                        AnimalCare is a comprehensive web application that digitizes daily operations of animal shelters and 
+                        optimizes adoption processes. Built using modern software development principles and cutting-edge 
+                        technologies, it aims to provide technological solutions for animal welfare.
                     </p>
                 </div>
             </div>
@@ -511,27 +508,27 @@
     <!-- Key Features -->
     <section class="content-section bg-light">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Key Security Features</h2>
+            <h2 class="section-title animate-on-scroll">Key Features</h2>
             <div class="row">
                 <div class="col-md-4 animate-on-scroll">
                     <div class="feature-card text-center">
-                        <i class="fas fa-lock feature-icon"></i>
-                        <h4>End-to-End Encryption</h4>
-                        <p>Messages are encrypted on sender's device and only decrypted on recipient's device using AES-256-GCM. Even server cannot read your messages.</p>
+                        <i class="fas fa-paw feature-icon"></i>
+                        <h4>Animal Management</h4>
+                        <p>Registration, editing, deletion, and detailed tracking of animals in the shelter. Management of information such as age, breed, and health status.</p>
                     </div>
                 </div>
                 <div class="col-md-4 animate-on-scroll">
                     <div class="feature-card text-center">
-                        <i class="fas fa-history feature-icon"></i>
-                        <h4>Forward Secrecy</h4>
-                        <p>Compromise of long-term keys doesn't compromise past messages. Each message uses a unique encryption key.</p>
+                        <i class="fas fa-heart feature-icon"></i>
+                        <h4>Adoption Process</h4>
+                        <p>Management of adoption applications, contract creation, and status tracking with optimized processes.</p>
                     </div>
                 </div>
                 <div class="col-md-4 animate-on-scroll">
                     <div class="feature-card text-center">
-                        <i class="fas fa-user-shield feature-icon"></i>
-                        <h4>Mutual Authentication</h4>
-                        <p>Two-way authentication using Diffie-Hellman key exchange with nonce-based challenge-response.</p>
+                        <i class="fas fa-users feature-icon"></i>
+                        <h4>User Management</h4>
+                        <p>Secure and organized user management with role-based access control (Admin, Staff, Adopter).</p>
                     </div>
                 </div>
             </div>
@@ -545,24 +542,24 @@
             <div class="architecture-diagram animate-on-scroll">
                 <div class="row text-center">
                     <div class="col-md-4">
-                        <div class="arch-component arch-client">
-                            <i class="fas fa-desktop fa-3x mb-3" style="color: #667eea;"></i>
-                            <h5>Client</h5>
-                            <p>X3DH Key Agreement<br>Double Ratchet<br>Message Encryption</p>
+                        <div class="arch-component arch-frontend">
+                            <i class="fas fa-desktop fa-3x mb-3" style="color: #61dafb;"></i>
+                            <h5>Frontend</h5>
+                            <p>React 19 + TypeScript<br>Modern UI/UX<br>Responsive Design</p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="arch-component arch-server">
-                            <i class="fas fa-server fa-3x mb-3" style="color: #28a745;"></i>
-                            <h5>Server</h5>
-                            <p>Message Routing<br>Key Distribution<br>Authentication</p>
+                        <div class="arch-component arch-backend">
+                            <i class="fas fa-server fa-3x mb-3" style="color: #6db33f;"></i>
+                            <h5>Backend</h5>
+                            <p>Spring Boot 3.5.4<br>RESTful API<br>DDD Architecture</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="arch-component arch-database">
-                            <i class="fas fa-database fa-3x mb-3" style="color: #ffc107;"></i>
+                            <i class="fas fa-database fa-3x mb-3" style="color: #f29111;"></i>
                             <h5>Database</h5>
-                            <p>User Management<br>Public Key Storage<br>Offline Messages</p>
+                            <p>MySQL 8.0<br>JPA/Hibernate<br>Data Persistence</p>
                         </div>
                     </div>
                 </div>
@@ -576,74 +573,46 @@
             <h2 class="section-title animate-on-scroll">Technical Implementation</h2>
             <div class="row">
                 <div class="col-lg-6 animate-on-scroll">
-                    <h4><i class="fas fa-key me-2 text-primary"></i>X3DH Key Agreement</h4>
-                    <p>Initial key establishment between two parties using Signal Protocol specification:</p>
-                    <div class="authentication-flow security-feature">
-                        <strong>Shared Secret:</strong> <br>
-                        <code>KDF(DH1 || DH2 || DH3 || DH4)</code><br>
-                        <span>where:</span><br>
-                        <code>DH1 = DH(IK_A, SPK_B)  // Identity × Signed PreKey</code><br>
-                        <code>DH2 = DH(EK_A, IK_B)   // Ephemeral × Identity</code><br>
-                        <code>DH3 = DH(EK_A, SPK_B)  // Ephemeral × Signed PreKey</code><br>
-                        <code>DH4 = DH(EK_A, OPK_B)  // Ephemeral × OneTime PreKey</code>
+                    <h4><i class="fas fa-layer-group me-2 text-success"></i>Architectural Approach</h4>
+                    <p>The project is developed using Domain-Driven Design (DDD) principles with Hexagonal Architecture (Ports & Adapters):</p>
+                    <div class="feature-list">
+                        <strong>Clean Architecture Layers:</strong><br>
+                        • Presentation Layer<br>
+                        • Application Layer<br>
+                        • Domain Layer<br>
+                        • Infrastructure Layer
                     </div>
                 </div>
                 <div class="col-lg-6 animate-on-scroll">
-                    <h4><i class="fas fa-sync-alt me-2 text-primary"></i>Double Ratchet Algorithm</h4>
-                    <p>Provides forward and backward secrecy with a new key for each message:</p>
-                    <div class="authentication-flow">
-                        <div class="security-feature">
-                            <strong>Step 1:</strong> Derive message key from chain key
-                        </div>
-                        <img src="./images/whispeer/kdf.png" alt="KDF Diagram" class="img-fluid mb-3">
-                        <div class="security-feature">
-                            <strong>Step 2:</strong> Encrypt current message with AES-GCM
-                        </div>
-                        <div class="security-feature">
-                            <strong>Step 3:</strong> Update chain key for forward secrecy
-                        </div>
-                        <div class="security-feature">
-                            <strong>Step 4:</strong> User Authentication - Encrypted credentials with PBKDF2 password hashing
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-12 animate-on-scroll">
-                    <h4><i class="fas fa-handshake me-2 text-primary"></i>Authentication Flow</h4>
-                    <div class="security-feature">
-                        <strong>Step 1:</strong> Diffie-Hellman Key Exchange - Establishes shared session key
-                    </div>
-                    <div class="security-feature">
-                        <strong>Step 2:</strong> Two-way Challenge-Response - Prevents replay attacks using nonces and timestamps
-                    </div>
-                    <div class="security-feature">
-                        <strong>Step 3:</strong> Digital Signatures - ECDSA signatures on signed pre-keys for authenticity
-                    </div>
-                    <div class="security-feature">
-                        <strong>Step 4:</strong> User Authentication - Encrypted credentials with PBKDF2 password hashing
+                    <h4><i class="fas fa-shield-alt me-2 text-success"></i>Security and Authorization</h4>
+                    <p>The system operates on Role-Based Access Control (RBAC) principle:</p>
+                    <div class="feature-list">
+                        <strong>User Roles:</strong><br>
+                        • Admin: Full system access<br>
+                        • Staff: Animal management<br>
+                        • Adopter: Application submission
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Security Analysis -->
+    <!-- Features Details -->
     <section class="content-section">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Security Analysis</h2>
+            <h2 class="section-title animate-on-scroll">Detailed Features</h2>
             
             <div class="row">
                 <div class="col-md-6 animate-on-scroll">
                     <div class="feature-card">
-                        <h4 class="text-success"><i class="fas fa-shield-alt me-2"></i>Protected Against</h4>
+                        <h4 class="text-success"><i class="fas fa-check-circle me-2"></i>Completed Features</h4>
                         <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Eavesdropping - All messages encrypted E2E</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Man-in-the-Middle - Digital signatures prevent key substitution</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Replay Attacks - Nonces and timestamps in authentication</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Forward Compromise - Forward secrecy through key ratcheting</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Server Compromise - Server cannot decrypt messages</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Password Attacks - Strong policy + PBKDF2 + salt</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Animal CRUD operations</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Adoption contract management</li>
+                            <li><i class="fas fa-check text-success me-2"></i>User authentication system</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Role-based access control</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Dashboard and statistics</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Responsive UI design</li>
                         </ul>
                     </div>
                 </div>
@@ -652,12 +621,12 @@
                     <div class="feature-card">
                         <h4 class="text-primary"><i class="fas fa-cog me-2"></i>Technology Stack</h4>
                         <ul class="list-unstyled">
-                            <li><i class="fas fa-code text-primary me-2"></i><strong>Language:</strong> Java 11+</li>
-                            <li><i class="fas fa-database text-primary me-2"></i><strong>Database:</strong> SQLite</li>
-                            <li><i class="fas fa-key text-primary me-2"></i><strong>Encryption:</strong> AES-256, ECC P-256</li>
-                            <li><i class="fas fa-handshake text-primary me-2"></i><strong>Key Exchange:</strong> Diffie-Hellman, ECDH</li>
-                            <li><i class="fas fa-signature text-primary me-2"></i><strong>Signatures:</strong> ECDSA</li>
-                            <li><i class="fas fa-hash text-primary me-2"></i><strong>Hashing:</strong> PBKDF2, HMAC-SHA256</li>
+                            <li><i class="fas fa-code text-primary me-2"></i><strong>Backend:</strong> Java 23, Spring Boot 3.5.4</li>
+                            <li><i class="fas fa-database text-primary me-2"></i><strong>Database:</strong> MySQL 8.0</li>
+                            <li><i class="fas fa-desktop text-primary me-2"></i><strong>Frontend:</strong> React 19, TypeScript</li>
+                            <li><i class="fas fa-layer-group text-primary me-2"></i><strong>Architecture:</strong> DDD, Hexagonal</li>
+                            <li><i class="fas fa-tools text-primary me-2"></i><strong>Build:</strong> Maven, npm</li>
+                            <li><i class="fas fa-vial text-primary me-2"></i><strong>Test:</strong> JUnit, React Testing Library</li>
                         </ul>
                     </div>
                 </div>
@@ -665,46 +634,32 @@
         </div>
     </section>
 
-    <!-- Usage and Installation -->
+    <!-- API Endpoints -->
     <section class="content-section bg-light">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Installation & Usage</h2>
+            <h2 class="section-title animate-on-scroll">API Endpoints</h2>
             
             <div class="row">
                 <div class="col-lg-6 animate-on-scroll">
-                    <h4><i class="fas fa-download me-2 text-primary"></i>Installation</h4>
+                    <h4><i class="fas fa-paw me-2 text-success"></i>Animal Management</h4>
                     <div class="code-block">
-<pre># Compile server
-javac ChatServer.java
-
-# Compile client  
-javac ChatClient.java
-
-# Start server
-java -cp ".:lib/sqlite-jdbc-3.49.1.0.jar" ChatServer 9090
-
-#or 
-./run.sh
-
-# Connect client
-java ChatClient &lt;server_ip&gt; 9090</pre>
+<pre>GET    /api/animals          # Get all animals
+GET    /api/animals/{id}      # Get animal by ID
+POST   /api/animals          # Create new animal
+PUT    /api/animals/{id}     # Update animal
+DELETE /api/animals/{id}     # Delete animal
+GET    /api/animals/type/{type} # Get animals by type</pre>
                     </div>
                 </div>
                 
                 <div class="col-lg-6 animate-on-scroll">
-                    <h4><i class="fas fa-play me-2 text-primary"></i>Usage Examples</h4>
+                    <h4><i class="fas fa-heart me-2 text-success"></i>Adoption</h4>
                     <div class="code-block">
-<pre># Direct end to end message
-@username Hello, this is a private message!
-
-# Broadcast end to end message
-broadcast Hello everyone!
-
-# Or just type for broadcast
-Hello everyone!
-
-# Exit application
-exit</pre>
+<pre>GET    /api/adoption/contracts     # Get all contracts
+POST   /api/adoption/contracts     # Create new contract
+PUT    /api/adoption/contracts/{id}/status # Update status
+GET    /api/adoption/adopters      # Get all adopters
+POST   /api/adoption/adopters      # Create new adopter</pre>
                     </div>
                 </div>
             </div>
@@ -715,14 +670,14 @@ exit</pre>
     <section class="content-section">
         <div class="container text-center">
             <div class="animate-on-scroll">
-                <h2 class="mb-4">Explore the Implementation</h2>
+                <h2 class="mb-4">Explore the Project</h2>
                 <p class="lead mb-4">
-                    This project demonstrates enterprise-grade security practices and modern cryptographic protocols. 
-                    Check out the complete source code and technical documentation on GitHub.
+                    This project aims to contribute to the digital transformation of animal shelters and provide 
+                    technological solutions for animal welfare using modern software development methodologies.
                 </p>
                 <div>
-                    <a href="https://github.com/ErenGunduzz/WhisPeer_Messaging_App.git" target="_blank" class="btn btn-custom btn-lg me-3">
-                        <i class="fab fa-github me-2"></i>View Source Code
+                    <a href="https://github.com/ErenGunduzz/AnimalCare" target="_blank" class="btn btn-custom btn-lg me-3">
+                        <i class="fab fa-github me-2"></i>View on GitHub
                     </a>
                     <a href="projects.html" class="btn btn-outline-light btn-lg">
                         <i class="fas fa-arrow-left me-2"></i>Back to Projects
@@ -795,29 +750,6 @@ exit</pre>
                 badge.addEventListener('mouseleave', function() {
                     this.style.transform = 'translateY(0) scale(1) rotate(0deg)';
                 });
-
-                badge.addEventListener('click', function() {
-                    // Create ripple effect
-                    const ripple = document.createElement('div');
-                    ripple.style.position = 'absolute';
-                    ripple.style.borderRadius = '50%';
-                    ripple.style.background = 'rgba(255,255,255,0.6)';
-                    ripple.style.transform = 'scale(0)';
-                    ripple.style.animation = 'ripple 0.6s linear';
-                    ripple.style.left = '50%';
-                    ripple.style.top = '50%';
-                    ripple.style.width = '20px';
-                    ripple.style.height = '20px';
-                    ripple.style.marginLeft = '-10px';
-                    ripple.style.marginTop = '-10px';
-                    
-                    this.style.position = 'relative';
-                    this.appendChild(ripple);
-                    
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
-                });
             });
         }
 
@@ -834,14 +766,6 @@ exit</pre>
                     this.style.transform = 'translateY(0) scale(1)';
                     this.style.boxShadow = 'none';
                 });
-
-                component.addEventListener('click', function() {
-                    // Add pulse animation
-                    this.style.animation = 'pulse 0.5s ease-in-out';
-                    setTimeout(() => {
-                        this.style.animation = '';
-                    }, 500);
-                });
             });
         }
 
@@ -853,7 +777,7 @@ exit</pre>
                     const icon = this.querySelector('.feature-icon');
                     if (icon) {
                         icon.style.transform = 'scale(1.2) rotate(10deg)';
-                        icon.style.textShadow = '0 0 20px rgba(102, 126, 234, 0.8)';
+                        icon.style.textShadow = '0 0 20px rgba(40, 167, 69, 0.8)';
                     }
                 });
                 
@@ -867,213 +791,17 @@ exit</pre>
             });
         }
 
-        // Code block copy functionality
-        function initCodeBlocks() {
-            const codeBlocks = document.querySelectorAll('.code-block');
-            codeBlocks.forEach(block => {
-                // Add copy button
-                const copyBtn = document.createElement('button');
-                copyBtn.innerHTML = '<i class="fas fa-copy"></i>';
-                copyBtn.className = 'btn btn-sm btn-outline-light position-absolute';
-                copyBtn.style.top = '10px';
-                copyBtn.style.right = '10px';
-                copyBtn.style.opacity = '0.7';
-                copyBtn.style.transition = 'opacity 0.3s ease';
-                
-                block.style.position = 'relative';
-                block.appendChild(copyBtn);
-                
-                copyBtn.addEventListener('click', function() {
-                    const code = block.querySelector('pre').textContent;
-                    navigator.clipboard.writeText(code).then(() => {
-                        this.innerHTML = '<i class="fas fa-check"></i>';
-                        this.classList.remove('btn-outline-light');
-                        this.classList.add('btn-success');
-                        
-                        setTimeout(() => {
-                            this.innerHTML = '<i class="fas fa-copy"></i>';
-                            this.classList.remove('btn-success');
-                            this.classList.add('btn-outline-light');
-                        }, 2000);
-                    });
-                });
-                
-                block.addEventListener('mouseenter', () => {
-                    copyBtn.style.opacity = '1';
-                });
-                
-                block.addEventListener('mouseleave', () => {
-                    copyBtn.style.opacity = '0.7';
-                });
-            });
-        }
-
-        // Security features animation
-        function initSecurityFeatures() {
-            const features = document.querySelectorAll('.security-feature');
-            features.forEach((feature, index) => {
-                feature.addEventListener('mouseenter', function() {
-                    this.style.backgroundColor = 'rgba(102, 126, 234, 0.3)';
-                    this.style.borderLeftWidth = '6px';
-                });
-                
-                feature.addEventListener('mouseleave', function() {
-                    this.style.backgroundColor = 'rgba(102, 126, 234, 0.1)';
-                    this.style.borderLeftWidth = '4px';
-                });
-            });
-        }
-
-        // Button effects
-        function initButtons() {
-            const buttons = document.querySelectorAll('.btn-custom');
-            buttons.forEach(button => {
-                button.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-3px) scale(1.05)';
-                });
-                
-                button.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-
-                button.addEventListener('click', function(e) {
-                    // Create ripple effect
-                    const rect = this.getBoundingClientRect();
-                    const ripple = document.createElement('span');
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size / 2;
-                    const y = e.clientY - rect.top - size / 2;
-                    
-                    ripple.style.width = ripple.style.height = size + 'px';
-                    ripple.style.left = x + 'px';
-                    ripple.style.top = y + 'px';
-                    ripple.classList.add('ripple-effect');
-                    
-                    this.appendChild(ripple);
-                    
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
-                });
-            });
-        }
-
-        // Parallax effect for hero section
-        function initParallax() {
-            window.addEventListener('scroll', function() {
-                const scrolled = window.pageYOffset;
-                const heroSection = document.querySelector('.hero-section');
-                const heroContent = document.querySelector('.hero-content');
-                
-                if (heroSection && heroContent && scrolled < window.innerHeight) {
-                    heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
-                    // heroSection transform'unu kaldırın veya limitli yapın
-                }
-            });
-        }
-
         // Initialize all functions
         document.addEventListener('DOMContentLoaded', function() {
             createParticles();
             initTechBadges();
             initArchComponents();
             initFeatureCards();
-            initCodeBlocks();
-            initSecurityFeatures();
-            initButtons();
-            initParallax();
             animateOnScroll();
         });
 
         // Add scroll event listener
         window.addEventListener('scroll', animateOnScroll);
-
-        // Add CSS for ripple effect
-        const style = document.createElement('style');
-        style.textContent = `
-            .ripple-effect {
-                position: absolute;
-                border-radius: 50%;
-                background: rgba(255, 255, 255, 0.6);
-                transform: scale(0);
-                animation: ripple-animation 0.6s linear;
-                pointer-events: none;
-            }
-
-            @keyframes ripple-animation {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-
-            /* Smooth scrolling */
-            html {
-                scroll-behavior: smooth;
-            }
-
-            /* Enhanced text selection */
-            ::selection {
-                background: rgba(102, 126, 234, 0.3);
-                color: white;
-            }
-
-            ::-moz-selection {
-                background: rgba(102, 126, 234, 0.3);
-                color: white;
-            }
-
-            /* Custom scrollbar */
-            ::-webkit-scrollbar {
-                width: 8px;
-            }
-
-            ::-webkit-scrollbar-track {
-                background: #1a1a2e;
-            }
-
-            ::-webkit-scrollbar-thumb {
-                background: linear-gradient(135deg, #667eea, #764ba2);
-                border-radius: 4px;
-            }
-
-            ::-webkit-scrollbar-thumb:hover {
-                background: linear-gradient(135deg, #764ba2, #f093fb);
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Add mouse move effect for hero section
-        document.addEventListener('mousemove', function(e) {
-            const hero = document.querySelector('.hero-section');
-            if (hero) {
-                const rect = hero.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const deltaX = (x - centerX) / centerX;
-                const deltaY = (y - centerY) / centerY;
-                
-                hero.style.background = `
-                    radial-gradient(
-                        circle at ${50 + deltaX * 10}% ${50 + deltaY * 10}%, 
-                        rgba(255,255,255,0.1) 0%, 
-                        transparent 70%
-                    ),
-                    linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)
-                `;
-            }
-        });
     </script>
 </body>
 </html>

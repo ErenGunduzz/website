@@ -26,7 +26,7 @@ body {
     position: absolute;
     width: 4px;
     height: 4px;
-    background: rgba(102, 126, 234, 0.6);
+    background: rgba(40, 167, 69, 0.6);
     border-radius: 50%;
     animation: float 20s infinite linear;
 }
@@ -51,7 +51,7 @@ body {
 .navbar {
     background: rgba(0, 0, 0, 0.95) !important;
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(102, 126, 234, 0.3);
+    border-bottom: 1px solid rgba(40, 167, 69, 0.3);
     transition: all 0.3s ease;
 }
 
@@ -69,7 +69,7 @@ body {
 }
 
 .navbar-brand:hover {
-    color: #667eea !important;
+    color: #28a745 !important;
     transform: scale(1.05);
 }
 
@@ -88,7 +88,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    color: #667eea !important;
+    color: #28a745 !important;
     transform: translateY(-2px);
 }
 
@@ -99,7 +99,7 @@ body {
     left: 50%;
     width: 0;
     height: 2px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #28a745, #20c997);
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -111,7 +111,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: linear-gradient(135deg, #28a745 0%, #20c997 50%, #17a2b8 100%);
     color: white;
     padding: 120px 0;
     text-align: center;
@@ -221,15 +221,15 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(32, 201, 151, 0.1) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .feature:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
-    border-color: rgba(102, 126, 234, 0.5);
+    box-shadow: 0 20px 40px rgba(40, 167, 69, 0.2);
+    border-color: rgba(40, 167, 69, 0.5);
 }
 
 .feature:hover::before {
@@ -239,7 +239,7 @@ body {
 .feature h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #28a745, #20c997);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -257,7 +257,7 @@ body {
 }
 
 .icon-link {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #28a745, #20c997);
     border: none;
     color: white;
     padding: 12px 25px;
@@ -289,7 +289,7 @@ body {
 
 .icon-link:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 10px 25px rgba(40, 167, 69, 0.4);
     color: white;
     text-decoration: none;
 }
@@ -320,15 +320,15 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(32, 201, 151, 0.1) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
-    border-color: rgba(102, 126, 234, 0.5);
+    box-shadow: 0 20px 40px rgba(40, 167, 69, 0.2);
+    border-color: rgba(40, 167, 69, 0.5);
 }
 
 .project-card:hover::before {
@@ -336,12 +336,12 @@ body {
 }
 
 .project-card.border-primary {
-    border: 2px solid #667eea !important;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border: 2px solid #28a745 !important;
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(32, 201, 151, 0.1) 100%);
 }
 
 .project-card h5 {
-    color: #667eea;
+    color: #28a745;
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -349,7 +349,7 @@ body {
 }
 
 .project-card:hover h5 {
-    color: #f093fb;
+    color: #20c997;
     transform: scale(1.05);
 }
 
@@ -360,7 +360,7 @@ body {
 }
 
 .project-card .badge {
-    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    background: linear-gradient(135deg, #28a745, #20c997) !important;
     border: none;
     padding: 8px 16px;
     border-radius: 20px;
@@ -373,11 +373,11 @@ body {
 
 .project-card .badge:hover {
     transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
 }
 
 .project-card .btn {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #28a745, #20c997);
     border: none;
     color: white;
     padding: 10px 20px;
